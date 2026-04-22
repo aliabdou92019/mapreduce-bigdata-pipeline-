@@ -1,0 +1,17 @@
+# Java
+*.class
+*.jar
+
+# Hadoop / run output
+output/
+tmp/
+build/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
