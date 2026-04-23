@@ -2,7 +2,7 @@
 
 set -e
 
-BASE="/user/cloudera/big-data-project"
+BASE="/user/cloudera/Root/big-data-project"
 
 echo "Creating HDFS folder structure under: $BASE"
 
