@@ -1,45 +1,42 @@
 import java.io.IOException;
-import java.util.Locale;
 
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class Task3Reducer extends Reducer<Text, CategoryStatsWritable, Text, Text> {
-
-    private final Text outputValue = new Text();
+public class Task3Reducer extends Reducer<Text, Text, Text, Text> {
 
     @Override
-    protected void reduce(Text key, Iterable<CategoryStatsWritable> values, Context context)
+    protected void reduce(Text key, Iterable<Text> values, Context context)
             throws IOException, InterruptedException {
 
-        long totalRequestCount = 0L;
-        long totalResponseTimeSum = 0L;
-        long totalErrorCount = 0L;
+        long totalCount = 0;
+        long totalResponseTime = 0;
+        long totalErrors = 0;
 
-        for (CategoryStatsWritable value : values) {
-            totalRequestCount += value.getRequestCount();
-            totalResponseTimeSum += value.getResponseTimeSum();
-            totalErrorCount += value.getErrorCount();
+        for (Text value : values) {
+            String[] parts = value.toString().split("\\|");
+
+            if (parts.length < 3) {
+                continue;
+            }
+
+            try {
+                totalCount += Long.parseLong(parts[0]);
+                totalResponseTime += Long.parseLong(parts[1]);
+                totalErrors += Long.parseLong(parts[2]);
+            } catch (Exception e) {
+                continue;
+            }
         }
 
-        double averageResponseTime = 0.0;
+        double avgResponseTime = 0.0;
 
-        if (totalRequestCount > 0) {
-            averageResponseTime = (double) totalResponseTimeSum / totalRequestCount;
+        if (totalCount > 0) {
+            avgResponseTime = (double) totalResponseTime / totalCount;
         }
 
-        /*
-         * Final value format:
-         * requestCount averageResponseTime errorCount
-         */
-        String result = String.format(
-                Locale.US,
-                "%d\t%.2f\t%d",
-                totalRequestCount,
-                averageResponseTime,
-                totalErrorCount);
-
-        outputValue.set(result);
-        context.write(key, outputValue);
+        context.write(
+                key,
+                new Text(totalCount + "\t" + avgResponseTime + "\t" + totalErrors));
     }
 }
