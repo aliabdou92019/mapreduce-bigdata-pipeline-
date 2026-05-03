@@ -51,7 +51,7 @@ public class Task3Mapper extends Mapper<LongWritable, Text, Text, Text> {
             throws IOException, InterruptedException {
 
         String line = value.toString();
-        String[] parts = line.split(",");
+        String[] parts = parseCsvLine(line);
 
         /*
          * Expected input:

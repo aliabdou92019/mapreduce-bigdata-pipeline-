@@ -2,11 +2,11 @@
 
 set -e
 
-JAR="/home/cloudera/test_big-data-project.jar"
+JAR="/home/cloudera/Task3_without_Combiner.jar"
 DRIVER="Task3Driver"
 
-INPUT="/user/cloudera/Root/big-data-project/task3/input/sample/task3_sample.txt"
-OUTPUT="/user/cloudera/Root/big-data-project/task3/output/sample/test_task3_result"
+INPUT="/user/cloudera/Root/big-data-project/task3/input/real/task3_full.txt"
+OUTPUT="/user/cloudera/Root/big-data-project/task3/output/real/task3_full_result_without_combiner"
 LOOKUP="/user/cloudera/Root/big-data-project/task3/lookup/real/task3_lookup.txt"
 
 echo "Checking local JAR..."
