@@ -1,7 +1,7 @@
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Partitioner;
 
-public class DepartmentPartitioner extends Partitioner<Text, DepartmentWritable> {
+public class Task11Partitioner extends Partitioner<Text, DepartmentWritable> {
 
     @Override
     public int getPartition(Text key, DepartmentWritable value, int numPartitions) {
@@ -12,8 +12,6 @@ public class DepartmentPartitioner extends Partitioner<Text, DepartmentWritable>
       
         int hash = department.hashCode();
 
-        hash = Math.abs(hash);
-
-        return hash % numPartitions;
+        return (hash & Integer.MAX_VALUE) % numPartitions;
     }
 }

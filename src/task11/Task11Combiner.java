@@ -2,7 +2,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
-public class DepartmentCombiner extends Reducer<Text, DepartmentWritable, Text, DepartmentWritable> {
+public class Task11Combiner extends Reducer<Text, DepartmentWritable, Text, DepartmentWritable> {
 
     @Override
     protected void reduce(Text key, Iterable<DepartmentWritable> values, Context context)

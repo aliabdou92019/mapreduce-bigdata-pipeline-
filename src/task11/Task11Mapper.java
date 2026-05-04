@@ -10,11 +10,11 @@ public class Task11Mapper extends Mapper<LongWritable, Text, Text, DepartmentWri
             throws IOException, InterruptedException {
 
         String line = value.toString();
-        String[] fields = line.split(",");
+        String[] fields = line.split("\\|");
 
-        if (fields.length >= 3) {
+        if (fields.length >= 4) {
             String department = fields[1].trim();
-            String salaryText = fields[2].trim();
+            String salaryText = fields[3].trim();
 
             if (department.length() == 0 || salaryText.length() == 0) {
                 return;
@@ -24,7 +24,7 @@ public class Task11Mapper extends Mapper<LongWritable, Text, Text, DepartmentWri
                 int salary = Integer.parseInt(salaryText);
 
                 if (salary > 0) {
-                    context.write(new Text(department), new departmentWritable(salary, 1));
+                    context.write(new Text(department), new DepartmentWritable(salary, 1));
                 }
             } catch (NumberFormatException e) {
                 return;
