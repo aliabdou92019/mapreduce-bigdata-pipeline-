@@ -21,3 +21,4 @@ output/task11/*
 # Java build artifacts
 *.class
 *.jar
+src/task11/shared/agency.txt
