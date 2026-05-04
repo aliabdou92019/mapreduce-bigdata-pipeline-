@@ -1,0 +1,94 @@
+[cloudera@quickstart scripts]$ bash run_task3_withCombiner.sh
+Checking local JAR...
+Checking HDFS input file...
+Checking HDFS lookup file...
+Removing old output folder if exists...
+Running Task 3 MapReduce job...
+26/05/03 13:25:52 INFO client.RMProxy: Connecting to ResourceManager at quickstart.cloudera/10.0.2.15:8032
+26/05/03 13:25:52 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+26/05/03 13:25:52 INFO input.FileInputFormat: Total input paths to process : 1
+26/05/03 13:25:53 INFO mapreduce.JobSubmitter: number of splits:10
+26/05/03 13:25:53 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1777830590126_0007
+26/05/03 13:25:53 INFO impl.YarnClientImpl: Submitted application application_1777830590126_0007
+26/05/03 13:25:53 INFO mapreduce.Job: The url to track the job: http://quickstart.cloudera:8088/proxy/application_1777830590126_0007/
+26/05/03 13:25:53 INFO mapreduce.Job: Running job: job_1777830590126_0007
+26/05/03 13:26:01 INFO mapreduce.Job: Job job_1777830590126_0007 running in uber mode : false
+26/05/03 13:26:01 INFO mapreduce.Job:  map 0% reduce 0%
+26/05/03 13:26:16 INFO mapreduce.Job:  map 10% reduce 0%
+26/05/03 13:26:18 INFO mapreduce.Job:  map 20% reduce 0%
+26/05/03 13:26:32 INFO mapreduce.Job:  map 40% reduce 0%
+26/05/03 13:26:43 INFO mapreduce.Job:  map 50% reduce 0%
+26/05/03 13:26:44 INFO mapreduce.Job:  map 60% reduce 0%
+26/05/03 13:26:54 INFO mapreduce.Job:  map 80% reduce 0%
+26/05/03 13:27:06 INFO mapreduce.Job:  map 90% reduce 0%
+26/05/03 13:27:07 INFO mapreduce.Job:  map 100% reduce 0%
+26/05/03 13:27:10 INFO mapreduce.Job:  map 100% reduce 100%
+26/05/03 13:27:11 INFO mapreduce.Job: Job job_1777830590126_0007 completed successfully
+26/05/03 13:27:11 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=7896
+		FILE: Number of bytes written=1637294
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1314496752
+		HDFS: Number of bytes written=308
+		HDFS: Number of read operations=43
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=10
+		Launched reduce tasks=1
+		Data-local map tasks=10
+		Total time spent by all maps in occupied slots (ms)=60893696
+		Total time spent by all reduces in occupied slots (ms)=1247232
+		Total time spent by all map tasks (ms)=118933
+		Total time spent by all reduce tasks (ms)=2436
+		Total vcore-milliseconds taken by all map tasks=118933
+		Total vcore-milliseconds taken by all reduce tasks=2436
+		Total megabyte-milliseconds taken by all map tasks=60893696
+		Total megabyte-milliseconds taken by all reduce tasks=1247232
+	Map-Reduce Framework
+		Map input records=10364867
+		Map output records=10364866
+		Map output bytes=153444379
+		Map output materialized bytes=2421
+		Input split bytes=1640
+		Combine input records=10365081
+		Combine output records=304
+		Reduce input groups=9
+		Reduce shuffle bytes=2421
+		Reduce input records=89
+		Reduce output records=9
+		Spilled Records=409
+		Shuffled Maps =10
+		Failed Shuffles=0
+		Merged Map outputs=10
+		GC time elapsed (ms)=62873
+		CPU time spent (ms)=162340
+		Physical memory (bytes) snapshot=1685422080
+		Virtual memory (bytes) snapshot=8360321024
+		Total committed heap usage (bytes)=563085312
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1314482852
+	File Output Format Counters 
+		Bytes Written=308
+Job finished.
+Output:
+ADMIN	564	511.7251773049645	21
+AUTH	4722	507.67005506141464	465
+CHECKOUT	49528	508.6254240025844	697
+CONTENT	22056	512.868289807762	421
+DOWNLOAD	4	567.5	2
+OTHER	1538019	509.99642852266453	60360
+PRODUCT	233544	509.5676960230192	12762
+SEARCH	7676	513.0341323606045	3675
+STATIC	8508753	509.94202428957567	99021
+[cloudera@quickstart scripts]$ 

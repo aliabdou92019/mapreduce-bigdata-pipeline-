@@ -1,24 +1,4 @@
 # Ignore real datasets
-data/real/**
+data/real/
 
-# Keep folder structure
-!data/real/
-!data/real/task3/
-!data/real/task3/input/
-!data/real/task3/lookup/
-!data/real/task11/
-!data/real/task11/input/
-!data/real/task3/input/.gitkeep
-!data/real/task3/lookup/.gitkeep
-!data/real/task11/input/.gitkeep
-
-# Ignore output contents, keep folders
-output/task3/*
-output/task11/*
-!output/task3/.gitkeep
-!output/task11/.gitkeep
-
-# Java build artifacts
-*.class
-*.jar
 src/task11/shared/agency.txt
