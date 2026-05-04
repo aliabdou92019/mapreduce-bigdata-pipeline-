@@ -24,7 +24,7 @@ public class Task11Mapper extends Mapper<LongWritable, Text, Text, DepartmentWri
                 int salary = Integer.parseInt(salaryText);
 
                 if (salary > 0) {
-                    context.write(new Text(department), new departmentWritable(salary, 1));
+                    context.write(new Text(department), new DepartmentWritable(salary, 1));
                 }
             } catch (NumberFormatException e) {
                 return;
