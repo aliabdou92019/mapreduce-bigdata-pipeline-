@@ -21,7 +21,6 @@ public class Task11Driver {
         job.setJarByClass(Task11Driver.class);
 
         job.setMapperClass(Task11Mapper.class);
-	job.setCombinerClass(DepartmentCombiner.class);
         job.setReducerClass(DepartmentReducer.class);
 
         job.setPartitionerClass(DepartmentPartitioner.class);
@@ -32,7 +31,7 @@ public class Task11Driver {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
 
-        job.setNumReduceTasks(50);
+        job.setNumReduceTasks(4);
 
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
