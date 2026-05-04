@@ -88,7 +88,7 @@ Here is the comparison showing the execution and data shuffle difference between
 
 ![Task 11 With Combiner](output/task11/Full_with_combiner.jpeg)
 
-**CPU time spent(ms)**: **426050** ~= **7.1 min** 
+**CPU time spent(ms)**: **199730** ~= **3.3 min** 
 
 ### Conclusion
 **The job performed faster without the Combiner.**   
