@@ -23,7 +23,7 @@ public class Task11Driver {
         job.setJarByClass(Task11Driver.class);
 
         job.setMapperClass(Task11Mapper.class);
-        job.setCombinerClass(DepartmentCombiner.class);
+        job.setCombinerClass(Task11Combiner.class);
         job.setReducerClass(Task11Reducer.class);
 
         job.setPartitionerClass(Task11Partitioner.class);
