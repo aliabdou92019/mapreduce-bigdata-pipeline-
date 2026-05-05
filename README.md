@@ -33,6 +33,7 @@ The objective of this project is to process and analyze massive datasets (server
 
 ---
 
+
 ## **Task 3: URL Categorization**
 
 **Objective:** Analyze web server access logs to categorize traffic, counting total requests, calculating average response times, and tracking error rates per category using an in-memory lookup table.
@@ -67,6 +68,9 @@ Here is the comparison showing the execution and data shuffle difference between
 
 **Objective:** Process employee data to compute total salaries, average salaries, and employee counts grouped by department.
 
+### **Data Collection & Preprocessing**
+The dataset used for this task was synthesized by merging **12 months of raw data** into a single massive dataset to simulate real-world Big Data volumes. Prior to processing, the raw data underwent a **preprocessing** phase where it was filtered to retain only the critical columns needed for our analysis. This optimization reduces noise, shrinks the file size footprint, and significantly improves the I/O throughput of the MapReduce job.
+
 ### **Technical Approach & Implementation Details**
 - **Custom Writable/WritableComparable:** Standard Hadoop types were insufficient because we needed to pass paired data (Salary and Employee Count). We implemented `DepartmentWritable` to securely serialize this object over the network. It includes a custom `compareTo` method (sorting by salary, then employees) to satisfy Hadoop's Shuffle & Sort phase.
 - **Mapper Logic & Data Validation:** 
@@ -91,7 +95,7 @@ Here is the comparison showing the execution and data shuffle difference between
 **CPU time spent(ms)**: **199730** ~= **3.3 min** 
 
 ### Conclusion
-**The job performed faster without the Combiner.**   
+**The job performed faster with the Combiner.**   
 
 ------
 
