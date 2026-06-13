@@ -405,5 +405,5 @@ This project is open source and available under the [MIT License](https://mit-li
 ---
 
 <p align="center">
-  <sub>Built with 🐘 Hadoop MapReduce at <b>Helwan National University</b></sub>
+  <sub>Built with 🐘 Hadoop MapReduce at <b>Helwan National University</b> as Big Data Course Project</sub>
 </p>
