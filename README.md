@@ -36,7 +36,7 @@
 
 ## 🎯 Overview
 
-**SoBigData** is a Big Data analytics project built for the **Big Data** course at **Helwan National University**. It demonstrates real-world, production-grade MapReduce pipelines that process and analyze massive datasets — web server access logs and federal employee salary records — on a Hadoop cluster.
+**mapreduce-bigdata-pipeline-** is a Big Data analytics project built for the **Big Data** course at **Helwan National University**. It demonstrates real-world, production-grade MapReduce pipelines that process and analyze massive datasets — web server access logs and federal employee salary records — on a Hadoop cluster.
 
 > _This is a team project. Refer to [Credits](#-credits) for all contributors._
 
