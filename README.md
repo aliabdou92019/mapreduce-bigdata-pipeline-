@@ -84,7 +84,7 @@
 ## 📁 Project Structure
 
 ```
-sobigdata/
+mapreduce-bigdata-pipeline-/
 ├── src/
 │   ├── task3/                          # URL Categorization
 │   │   ├── Task3Driver.java            # Job configuration & execution
@@ -225,8 +225,8 @@ The dataset was synthesized by merging **12 months of raw federal payroll data**
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/aliabdou92019/sobigdata.git
-cd sobigdata
+git clone https://github.com/aliabdou92019/mapreduce-bigdata-pipeline-.git
+cd mapreduce-bigdata-pipeline-
 ```
 
 ### 2. Setup HDFS Directory Structure
