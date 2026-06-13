@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
-<h1 align="center">🐘 SoBigData — Big Data MapReduce Project</h1>
+<h1 align="center">🐘 Big Data MapReduce Project</h1>
 
 <p align="center">
   <b>Scalable log analytics and salary intelligence powered by Hadoop MapReduce</b><br/>
